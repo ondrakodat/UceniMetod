@@ -7,6 +7,7 @@ import com.kodat.stringMetody.StringBuilderM;
 public class Main {
     static void main() {
         StringBuilderM m = new StringBuilderM();
-        System.out.println(m.ZmenPoziciZnaku());
+        StringBuilder builder = m.NahradTeckyZaCarky();
+        System.out.println(builder);
     }
 }
