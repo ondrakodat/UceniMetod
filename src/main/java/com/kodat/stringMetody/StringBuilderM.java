@@ -25,7 +25,7 @@ public class StringBuilderM {
     }
 
     /*
-    // Metoda pro přidání textu
+    // Metoda pro přidání textu na konec textového řetězce
      */
     public StringBuilder pridaniTextu(String text){
         StringBuilder builder = new StringBuilder("Toto je počateční text. ");
