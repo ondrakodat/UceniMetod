@@ -9,5 +9,9 @@ import com.kodat.stringMetody.StringM;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     static void main() {
+        SouboryMetody soubor = new SouboryMetody();
+        //soubor.VytvorSoubor();
+        //soubor.ZapisDoSouboru("Text na zapsani");
+
     }
 }
