@@ -32,6 +32,16 @@ public class StringBufferM {
     }
 
     /*
+    Vyuziti trimu k odstranění whitespacu v Stringu na zacatku a konci
+     */
+    public StringBuffer OdstranWhiteSpace(){
+        String text = "   Hello World With Whitespace   ";
+        String vysledek = text.trim();
+        StringBuffer buffer = new StringBuffer("[" + vysledek + "]");
+        return buffer;
+    }
+
+    /*
         Obecně ma StringBuffer stejné metody jako StringBuilder
 
     */
