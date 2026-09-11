@@ -1,6 +1,7 @@
-package com.kodat;
+package com.kodat.fileMetody;
 
 import java.io.*;
+import java.util.Scanner;
 
 public class SouboryMetody {
     public void VytvorSoubor(){
@@ -27,16 +28,15 @@ public class SouboryMetody {
     }
 
     public void VypisObsahSouboru(){
-        try {
-            FileReader reader = new FileReader("soubor.txt");
-            try {
-                System.out.println(reader.read());
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        }
+      File reader = new File("soubor.txt");
+      try (Scanner scanner = new Scanner(reader)){
+          while (scanner.hasNextLine()){
+              String vysledek = scanner.nextLine();
+              System.out.println(vysledek);
+          }
+      }catch (FileNotFoundException e){
+          e.printStackTrace();
+      }
 
     }
 }
