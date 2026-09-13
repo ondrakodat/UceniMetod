@@ -6,5 +6,8 @@ public class MainProFileMetody {
         so.VytvorSouborPresNio();
         System.out.println(so.ZiskejDataZeSouboru());
         so.VypisDataZeSouboru();
+        so.VytvorBinSouborAUlozData();
+        System.out.println("Obsah bin souboru");
+        System.out.println(so.vypisObsahBinSouboru());
     }
 }

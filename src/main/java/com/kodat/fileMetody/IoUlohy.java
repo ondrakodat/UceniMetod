@@ -50,6 +50,30 @@ public class IoUlohy {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void VytvorBinSouborAUlozData(){
+        Path cesta = Path.of("data.bin");
+        try {
+            List<String> dataDoSouboru = Arrays.asList("Ondra", "Bohous", "Petr");
+            Files.createFile(cesta);
+            Files.write(cesta, dataDoSouboru);
+            System.out.println("Uspesne zapsano do bin souboru");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+    public String vypisObsahBinSouboru(){
+        Path cesta = Path.of("data.bin");
+        try {
+            byte[] vysledek = Files.readAllBytes(cesta);
+            String vysledekCitelny = new String(vysledek);
+            return vysledekCitelny;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
 
     }
